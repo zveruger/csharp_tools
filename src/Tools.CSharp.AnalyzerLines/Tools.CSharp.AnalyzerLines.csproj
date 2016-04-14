@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{17F1F4B7-851C-474F-83A9-BEB60296A8D4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools.CSharp.AnalyzerLines</RootNamespace>
+    <AssemblyName>Tools.CSharp.AnalyzerLines</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\IgnoreSymbols.cs" />
+    <Compile Include="Core\Interfaces\IUnit.cs" />
+    <Compile Include="Core\Interfaces\IUnitForIgnoreSymbols.cs" />
+    <Compile Include="Core\Unit.cs" />
+    <Compile Include="Core\UnitError.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sequence.cs" />
+    <Compile Include="SequenceExtensions.cs" />
+    <Compile Include="Units\Containers\BaseContainerUnits.cs" />
+    <Compile Include="Units\Containers\ContainerAnyUnits.cs" />
+    <Compile Include="Units\Containers\ContainerIfElsesUnits.cs" />
+    <Compile Include="Units\Containers\ContainerListUnits.cs" />
+    <Compile Include="Units\Containers\Interfaces\IContainerUnits.cs" />
+    <Compile Include="Units\Simple\BaseSymbolsUnit.cs" />
+    <Compile Include="Units\Simple\BaseValueUnit.cs" />
+    <Compile Include="Units\Simple\CommentUnit.cs" />
+    <Compile Include="Units\Simple\Interfaces\IValueUnit.cs" />
+    <Compile Include="Units\Simple\Interfaces\ISymbolsUnit.cs" />
+    <Compile Include="Units\Simple\Interfaces\IStringUnit.cs" />
+    <Compile Include="Units\Simple\Interfaces\ISymbolUnit.cs" />
+    <Compile Include="Units\Simple\StringUnit.cs" />
+    <Compile Include="Units\Simple\SymbolUnit.cs" />
+    <Compile Include="Units\Simple\ValueUnit.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools.CSharp.Core\Tools.CSharp.Core.csproj">
+      <Project>{5e6b850f-657b-4740-9858-d3e2c8980633}</Project>
+      <Name>Tools.CSharp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(SolutionDir)"
+xcopy "$(TargetDir)$(TargetFileName)" "..\bin\.Net4.0\" /d /y /f</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

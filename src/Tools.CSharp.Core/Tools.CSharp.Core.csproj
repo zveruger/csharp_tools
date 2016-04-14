@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E6B850F-657B-4740-9858-D3E2C8980633}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools.CSharp</RootNamespace>
+    <AssemblyName>Tools.CSharp.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collections\DataItemCollections\DataImageItems\DataImageHelpItem.cs" />
+    <Compile Include="Collections\DataItemCollections\DataImageItems\DataImageItem.cs" />
+    <Compile Include="Collections\DataItemCollections\DataItems\DataHelpItem.cs" />
+    <Compile Include="Collections\DataItemCollections\DataItems\DataItem.cs" />
+    <Compile Include="Collections\DataItemCollections\DataItemCollection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastByteCollection.cs" />
+    <Compile Include="Collections\FastCollections\BaseFastCollection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastInt16Collection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastInt32Collection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastInt64Collection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastUInt16Collection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastUInt32Collection.cs" />
+    <Compile Include="Collections\FastCollections\Types\FastUInt64Collection.cs" />
+    <Compile Include="Collections\JugglerCollection.cs" />
+    <Compile Include="Collections\ObservableCollections\ImprovedNotifyCollectionChangedEventArgs.cs" />
+    <Compile Include="Collections\ObservableCollections\ImprovedObservableCollection.cs" />
+    <Compile Include="Collections\MutationCollections\MutatingObservableCollection.cs" />
+    <Compile Include="Collections\MutationCollections\MutatingReadOnlyCollection.cs" />
+    <Compile Include="Collections\MutationCollections\MutationDictionaryAndListCollection.cs" />
+    <Compile Include="Collections\ReadOnlyCollections\ReadOnlyDictionary.cs" />
+    <Compile Include="Collections\SortedCollections\SortDirection.cs" />
+    <Compile Include="Collections\SortedCollections\SortedItemCollection.cs" />
+    <Compile Include="Collections\SortedCollections\SortedItemCollectionCountEventArgs.cs" />
+    <Compile Include="Collections\SortedCollections\SortedObservableItemCollection.cs" />
+    <Compile Include="Collections\SortedCollections\SortedViewModelItemCollection.cs" />
+    <Compile Include="Connectors\Implementation\BaseConnectorConnectParams.cs" />
+    <Compile Include="Connectors\Implementation\BaseConnector.cs" />
+    <Compile Include="Connectors\Implementation\ServerConnectorConnectParams.cs" />
+    <Compile Include="Connectors\Specification\ConnectorState.cs" />
+    <Compile Include="Connectors\Specification\IConnector.cs" />
+    <Compile Include="Connectors\Specification\IConnectorConnectParams.cs" />
+    <Compile Include="Connectors\Specification\IServerConnectorConnectParams.cs" />
+    <Compile Include="Cryptography\Crypto.cs" />
+    <Compile Include="Downloads\DownloadFileProgressEventArgs.cs" />
+    <Compile Include="Downloads\DownloadProcess.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\AssemblyExtensions.cs" />
+    <Compile Include="Extensions\CancellationTokenSourceExtensions.cs" />
+    <Compile Include="Extensions\CharExtensions.cs" />
+    <Compile Include="Extensions\CollectionExtensions.cs" />
+    <Compile Include="Extensions\DirectoryInfoExtension.cs" />
+    <Compile Include="Extensions\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\EnumExtensions.cs" />
+    <Compile Include="Extensions\EventArgsExtensions.cs" />
+    <Compile Include="Extensions\ExceptionExtensions.cs" />
+    <Compile Include="Extensions\ExpressionExtensions.cs" />
+    <Compile Include="Extensions\FileInfoExtensions.cs" />
+    <Compile Include="Extensions\IconExtensions.cs" />
+    <Compile Include="Extensions\Int32Extensions.cs" />
+    <Compile Include="Extensions\ListExtensions.cs" />
+    <Compile Include="Extensions\LoggerExtensions.cs" />
+    <Compile Include="Extensions\ParallelExtensions.cs" />
+    <Compile Include="Extensions\ReadOnlyCollectionExtensions.cs" />
+    <Compile Include="Extensions\SocketExtensions.cs" />
+    <Compile Include="Extensions\StringBuilderExtensions.cs" />
+    <Compile Include="Extensions\StringCollectionExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\WeakReferenceExpression.cs" />
+    <Compile Include="Handlers\ExceptionHandlers\BaseExceptionHandlersByValidationHepler.cs" />
+    <Compile Include="Helpers\ValidationHelpers\ValidationHeplerException.cs" />
+    <Compile Include="SettingsProperties\BaseSettingsPropertiesExt.cs" />
+    <Compile Include="Timers\ReverseTimer.cs" />
+    <Compile Include="SettingsProperties\BaseSettingsProperties.cs" />
+    <Compile Include="SettingsProperties\BaseComplexSettingsProperties.cs" />
+    <Compile Include="SettingsProperties\Core\ISettingsProperties.cs" />
+    <Compile Include="SettingsProperties\Core\IComplexSettingsProperties.cs" />
+    <Compile Include="SettingsProperties\Core\IInternalSettingsProperties.cs" />
+    <Compile Include="SettingsProperties\SettingsPropertiesSaver.cs" />
+    <Compile Include="Utils\GetString.cs" />
+    <Compile Include="Handlers\ExceptionHandlers\BaseExceptionHandlers.cs" />
+    <Compile Include="Handlers\ExceptionHandlers\ExceptionHandlerLevel.cs" />
+    <Compile Include="Handlers\ExceptionHandlers\ExceptionHandlerPrimitive.cs" />
+    <Compile Include="Helpers\ValidationHelpers\IValidationHelper.cs" />
+    <Compile Include="Utils\IBaseApplication.cs" />
+    <Compile Include="InstanceClass.cs" />
+    <Compile Include="Loggers\FileLoggers\FileLogger.cs" />
+    <Compile Include="Loggers\BaseLoggerWritable.cs" />
+    <Compile Include="Loggers\BaseLogger.cs" />
+    <Compile Include="Loggers\ILogger.cs" />
+    <Compile Include="Loggers\FileLoggers\FileLoggerWritable.cs" />
+    <Compile Include="Loggers\LoggerLevel.cs" />
+    <Compile Include="Loggers\LoggerPrimitive.cs" />
+    <Compile Include="Pings\PingServer.cs" />
+    <Compile Include="Pings\PingServerActionEventArgs.cs" />
+    <Compile Include="Pings\PingServerResultEventArgs.cs" />
+    <Compile Include="Pings\PingServerStateResult.cs" />
+    <Compile Include="ProductInformation\CompanyInformation.cs" />
+    <Compile Include="ProductInformation\ICompanyInformation.cs" />
+    <Compile Include="ProductInformation\IInformationBase.cs" />
+    <Compile Include="ProductInformation\InformationBase.cs" />
+    <Compile Include="ProductInformation\IProductVersionInformation.cs" />
+    <Compile Include="ProductInformation\ProductVersionInformation.cs" />
+    <Compile Include="ProgressProcesses\IProgressProcess.cs" />
+    <Compile Include="ProgressProcesses\ProgressProcess.cs" />
+    <Compile Include="ProgressProcesses\ProgressProcessPriority.cs" />
+    <Compile Include="ProgressProcesses\ProgressProcessSheduler.cs" />
+    <Compile Include="ProgressProcesses\ProgressProcessState.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StateMachines\IStateble.cs" />
+    <Compile Include="StateMachines\IStateMachine.cs" />
+    <Compile Include="StateMachines\StateEventArgs.cs" />
+    <Compile Include="StateMachines\StateMachine.cs" />
+    <Compile Include="ListChangedEventArgs.cs" />
+    <Compile Include="Utils\TimeUtils.cs" />
+    <Compile Include="Values\TypesValueValid.cs" />
+    <Compile Include="Uniques\UniqueObjectsId.cs" />
+    <Compile Include="Uniques\UniqueObjectsIdWithName.cs" />
+    <Compile Include="BaseDisposable.cs" />
+    <Compile Include="Formatters\VersionFormatter.cs" />
+    <Compile Include="ViewModels\IBaseViewModel.cs" />
+    <Compile Include="ViewModels\Validators\IBaseViewModelValidator.cs" />
+    <Compile Include="ViewModels\IBaseViewModelDataError.cs" />
+    <Compile Include="ViewModels\Validators\PropertyValidationResult.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
+    <Compile Include="ViewModels\BaseViewModelCollection.cs" />
+    <Compile Include="ViewModels\Validators\BaseViewModelValidator.cs" />
+    <Compile Include="ViewModels\ViewModelCollectionChangedEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(SolutionDir)"
+xcopy "$(TargetDir)$(TargetFileName)" "..\bin\.Net4.0\" /d /y /f</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3208E213-055C-4E97-9246-27C83FD6244D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools.CSharp.Controls</RootNamespace>
+    <AssemblyName>Tools.CSharp.Controls</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clocks\AnalogClockControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComboBoxes\DigitsComboBox.cs" />
+    <Compile Include="ComboBoxes\FrezableTextComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxes\LazyLoadDatasByFrezableComboBox.cs" />
+    <Compile Include="ComboBoxes\WatermarkFrezableTextComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ComboBoxes\WatermarkFrezableTextComboBoxColorItemcs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CompanyImageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CompanyImageControl.Designer.cs">
+      <DependentUpon>CompanyImageControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataGridViews\CheckBoxControls\DataGridCheckBoxColumnExtended.cs" />
+    <Compile Include="DataGridViews\CheckBoxControls\DataGridViewCheckBoxColumnHeaderCell.cs" />
+    <Compile Include="DataGridViews\CheckBoxControls\DataGridViewCheckBoxColumnHeaderCellEventArgs.cs" />
+    <Compile Include="DataGridViews\DoubleBufferedDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViews\DoubleBufferedDataGridViewExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoadingCircles\ILoadingCircle.cs" />
+    <Compile Include="MessageBoxs\CenteringMessageBox.cs" />
+    <Compile Include="TabControls\FlatTabControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TabControls\FlatTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Utils\BaseDeviceInformation.cs" />
+    <Compile Include="Labels\TransparentLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewControls\ListViewExtensions.cs" />
+    <Compile Include="ListViewControls\SorterListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewControls\SorterListViewColumnHeader.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ListViewControls\Sorters\ListViewColumnIntSorter.cs" />
+    <Compile Include="ListViewControls\Sorters\ListViewColumnSorter.cs" />
+    <Compile Include="ListViewControls\Sorters\ListViewColumnTextSorter.cs" />
+    <Compile Include="LoadingCircles\LoadingCircle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LoadingCircles\LoadingCircleToolStripItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="NumericUpDowns\NumericUpDownExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Panels\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeparatorLine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StatusStrips\GradientStatusStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TextBoxes\DigitsTextBox.cs" />
+    <Compile Include="TextBoxes\TextBoxExtended.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ToolStrips\GradientToolStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="TreeViews\FastMultiSelectTreeViewsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TreeViews\MultiSelectTreeView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DataGridViews\Utils\DataGridViewModelValueColumns.cs" />
+    <Compile Include="Utils\Collections\DataItemCollections\SelectableDataItemCollection.cs" />
+    <Compile Include="Utils\DialogCenteringService.cs" />
+    <Compile Include="Utils\Extensions\ClipboardExtension.cs" />
+    <Compile Include="Utils\Extensions\ComboBoxExtensions.cs" />
+    <Compile Include="Utils\Extensions\ControlExtensions.cs" />
+    <Compile Include="Utils\Extensions\DataGridViewExtensions.cs" />
+    <Compile Include="Utils\Extensions\DesignerActionItemCollectionExtensions.cs" />
+    <Compile Include="Utils\Extensions\GraphicsExtension.cs" />
+    <Compile Include="Utils\Extensions\MatrixExtension.cs" />
+    <Compile Include="Utils\Extensions\StringExtensions.cs" />
+    <Compile Include="Utils\Extensions\TreeNodeCollectionExtensions.cs" />
+    <Compile Include="Utils\Extensions\TypeExtensions.cs" />
+    <Compile Include="Utils\FindDatas\DataGridViewFindDatas\DataGridViewFindRowsByTypeFind.cs" />
+    <Compile Include="Utils\FindDatas\DataGridViewFindDatas\DataGridViewFindRowsIndexes.cs" />
+    <Compile Include="Utils\FindDatas\DataGridViewFindDatas\DataGridViewFindRows.cs" />
+    <Compile Include="Utils\FindDatas\Core\FindData.cs" />
+    <Compile Include="Utils\FindDatas\Settings\FindDatasSettings.cs" />
+    <Compile Include="Utils\FindDatas\Settings\IFindDatasSettings.cs" />
+    <Compile Include="Utils\FindDatas\Core\PositionFoundOfficialSymbol.cs" />
+    <Compile Include="Utils\MenuCreators\DataItemMenuItemsCreator\BaseDataImageHelpItemMenuItemsCreator.cs" />
+    <Compile Include="Utils\MenuCreators\DataItemMenuItemsCreator\BaseDataImageItemMenuItemsCreator.cs" />
+    <Compile Include="Utils\MenuCreators\DataItemMenuItemsCreator\BaseDataItemMenuItemsCreator.cs" />
+    <Compile Include="Utils\MenuCreators\MenuItemsCreator.cs" />
+    <Compile Include="Utils\MenuCreators\Parts\MenuItemsCreatorPartDataCls.cs" />
+    <Compile Include="Utils\SwitchControls\ISwitchViewControlsOwner.cs" />
+    <Compile Include="Utils\SwitchControls\SwitchViewControls.cs" />
+    <Compile Include="Utils\Comparers\TreeNodeComparer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools.CSharp.Core\Tools.CSharp.Core.csproj">
+      <Project>{5e6b850f-657b-4740-9858-d3e2c8980633}</Project>
+      <Name>Tools.CSharp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(SolutionDir)"
+xcopy "$(TargetDir)$(TargetFileName)" "..\bin\.Net4.0\" /d /y /f</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

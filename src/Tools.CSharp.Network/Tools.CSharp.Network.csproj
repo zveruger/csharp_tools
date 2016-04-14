@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EDA8A7DB-9A4C-42AD-A79E-BAE1E13ED24B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Tools.CSharp.Network</RootNamespace>
+    <AssemblyName>Tools.CSharp.Network</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ftp\FtpClient.cs" />
+    <Compile Include="Http\WebServers\FileWebServers\FileWebServer.cs" />
+    <Compile Include="Http\WebServers\FileWebServers\FileWebServerCallbackResultEventArgs.cs" />
+    <Compile Include="Http\WebServers\FileWebServers\FileWebServerCallbackResultType.cs" />
+    <Compile Include="Http\WebServers\WebServer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tcp\Connectors\Exceptions\TcpConnectorAction.cs" />
+    <Compile Include="Tcp\Connectors\Exceptions\TcpConnectorErrorType.cs" />
+    <Compile Include="Tcp\Connectors\Exceptions\TcpConnectorException.cs" />
+    <Compile Include="Tcp\Connectors\ITcpConnectorSendAndReceive.cs" />
+    <Compile Include="Tcp\Connectors\TcpConnector.cs" />
+    <Compile Include="Tcp\Connectors\TcpQueueDataConnector.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Arrays\BaseTcpTypeByteArray.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Arrays\BaseTcpTypeDWordArray.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Arrays\BaseTcpTypeIntArray.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Arrays\BaseTcpTypeWordArray.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Enums\BaseTcpTypeEnum.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Enums\TcpTypeDWordEnum.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Enums\TcpTypeIntEnum.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Enums\TcpTypeWordEnum.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Flags\BaseTcpTypeFlag.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Flags\BaseTcpTypeByteFlag.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Flags\BaseTcpTypeDWordFlag.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Flags\BaseTcpTypeIntFlag.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Flags\BaseTcpTypeWordFlag.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\TcpTypeBoolNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\TcpTypeByteNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\TcpTypeDWordNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\TcpTypeIntNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\TcpTypeWordNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\TcpSimpleTypeComposite.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Strings\BaseTcpTypeString.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Strings\TcpTypeByteString.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\BaseTcpTypeComposite.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Strings\TcpTypeIntString.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Strings\TcpTypeWordString.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Arrays\BaseTcpTypeArray.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Nullables\BaseTcpTypeNullable.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpEndianness.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpTypeComposite.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeBool.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeData.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeDWord.cs" />
+    <Compile Include="Tcp\DataTypes\ComplexTypes\Enums\TcpTypeByteEnum.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeInt.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeWord.cs" />
+    <Compile Include="Tcp\DataTypes\TcpConvert.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpCloneable.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpType.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpTypeConvertible.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpTypeData.cs" />
+    <Compile Include="Tcp\DataTypes\ITcpTypeValue.cs" />
+    <Compile Include="Tcp\DataTypes\SimpleTypes\TcpTypeByte.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Tools.CSharp.Core\Tools.CSharp.Core.csproj">
+      <Project>{5e6b850f-657b-4740-9858-d3e2c8980633}</Project>
+      <Name>Tools.CSharp.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>cd "$(SolutionDir)"
+xcopy "$(TargetDir)$(TargetFileName)" "..\bin\.Net4.0\" /d /y /f</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
